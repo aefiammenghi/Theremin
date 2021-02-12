@@ -1,0 +1,43 @@
+#include <stdio.h>
+#include <string.h>
+#define N_ELEMENTS 10
+int main()
+{
+    int vector[N_ELEMENTS];
+    int x;
+    int max = 0;
+    int old_max = 0;
+    
+    int a[10]={5756,5765,5733,5723,5645,5755,5721,5789,5744,5721};
+	int i,j,min,t; 
+        //selection sort
+        
+    for(int k = 0; k<N_ELEMENTS;k++){
+        printf("%d ",a[k]);  
+    }
+        for(i=0; i<N_ELEMENTS-1; i++)
+        {
+		    min=i;   
+    		for (j=i+1;j<N_ELEMENTS;j++)
+    		{
+    			if (a[j]<a[min])
+    			min=j;						
+    		}	
+        	t = a[min];   
+            //si trova l'elemento più piccolo dell'array e si scambia con l'elemento alla posizione i
+            a[min] = a[i];
+            a[i] = t;	
+        	//printf("%d ", a[i]);
+	    }	
+	
+	
+        printf("\n");
+         
+        vector[i] = x;
+        
+        for(int k = 0; k<N_ELEMENTS;k++){
+          printf("%d ",a[k]);  
+        }
+         printf("\n");
+    return 0;
+}
